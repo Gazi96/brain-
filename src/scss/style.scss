@@ -1,0 +1,178 @@
+@import 'color';
+@import 'bootstrap';
+@import 'custom';
+@import 'normalize';
+@import 'fonts';
+
+body{
+    background: linear-gradient(to right, rgb(116, 116, 191), rgb(52, 138, 199));
+    font-size: 16px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    max-width: 500px;
+    height: 120px;
+    width: 50vw;
+    margin: auto;
+    .header__headline{
+        margin: 0px;
+        flex-basis: 70%;
+        font-family: $font1;
+        font-weight: 800;
+        text-transform: uppercase;
+        text-align: center;
+        background: linear-gradient(to right, rgb(43, 88, 118), rgb(78, 67, 118));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .header__points{
+        text-align: right;
+        flex-basis: 15%;
+        font-family: $font1;
+        font-weight: 800;
+        font-size: 3em;
+        background: linear-gradient(to right, rgb(43, 88, 118), rgb(78, 67, 118));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .header__points--hidden{
+        font-size: 0px;
+    }
+}
+
+.main{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    .main__list{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+        padding: 0;
+        margin: 0px;
+        list-style: none;
+        height: 60vh;
+        .list__item{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: $font1;
+            font-weight: 800;
+            font-size: 20px;
+            text-transform: uppercase;
+            width: 105px;
+            height: 50px;
+            background: linear-gradient(to left, rgb(235, 51, 73), rgb(244, 92, 67));
+        }
+        .list__item:hover{
+            cursor: pointer;
+        }
+    }
+    .main__list--hidden{
+        display: none;
+    }
+    .table{
+        display: flex;
+        max-width: 500px;
+        max-height: 500px;
+        width: 50vw;
+        height: 50vw;
+        border: 2px solid black;
+        margin: auto;
+        flex-wrap: wrap;
+        position: relative;
+        .table__item{
+            border: 1px solid black;
+            flex-basis: 20%;
+        }
+        .table__item:hover{
+            cursor: pointer;
+        }
+        .table__img{
+            position: absolute;
+            width: 20px;
+            height: auto;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            transition: all 0.5s;
+        }
+        .table__img--hidden{
+            display: none;
+        }
+    }
+    .table--hidden{
+        display: none;
+    }
+    .main__box{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        align-items: center;
+        height: 120px;
+        .main__button{
+            font-family: $font1;
+            font-weight: 800;
+            font-size: 20px;
+            text-transform: uppercase;
+            width: 105px;
+            height: 50px;
+            
+            background: linear-gradient(to left, rgb(235, 51, 73), rgb(244, 92, 67));
+        }
+        .main__button--none{
+            
+        }
+    }
+    .main__button:hover{
+        cursor: pointer;
+    }
+    .main__button--none{
+        display: none;
+    }
+    .main__buttons{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 0px;
+        margin: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 120px;
+        .buttons__item{
+            list-style: none;
+            font-family: $font1;
+            font-weight: 800;
+            font-size: 20px;
+            text-transform: uppercase;
+            background: linear-gradient(to left, rgb(235, 51, 73), rgb(244, 92, 67));
+            width: 105px;
+            height: 50px;
+            cursor: pointer;
+            margin: 5px 0px;
+        }
+    }
+    .buttons__item--hidden{
+            display: none;
+    }
+}
+
+@media only screen and (max-width: 520px) {
+    .main .table{
+        width: 100vw;
+        height: 100vw;
+    }
+}
